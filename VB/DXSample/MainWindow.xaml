@@ -1,0 +1,23 @@
+﻿<Window x:Class="DXSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"  
+        xmlns:local="clr-namespace:DXSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600">
+    <Grid>
+        <dxg:GridControl 
+            AutoExpandAllGroups="True"
+            ItemsSource="{Binding}" 
+            CustomColumnDisplayText="GridControl_CustomColumnDisplayText" 
+            CustomGroupDisplayText="GridControl_CustomGroupDisplayText">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="Login"/>
+                <dxg:GridColumn FieldName="RegistrationDate" GroupIndex="1"/>
+                <dxg:GridColumn FieldName="AccessLevel"/>               
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+    </Grid>
+</Window>
